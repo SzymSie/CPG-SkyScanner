@@ -4,6 +4,8 @@ import {
     ButtonBurger,
     ButtonHome,
   } from "@/components/ui/button";
+import { useState } from "react";
+  import ExpandableMenu from "./ExpandableMenu"
 
 // navbar style for hotel, car, flight routes
 
@@ -13,9 +15,15 @@ export default function Navbar() {
 
 // navbar style is different at root
 
-export function NavbarHome({handleClickHome=()=>{}, handleClickRegional=()=>{}, handleClickLogin=()=>{}, handleClickBurger=()=>{}}) {
+export function NavbarHome({handleClickHome=()=>{}, handleClickRegional=()=>{}, handleClickLogin=()=>{} }) {
+  const [toggleMenu, setToggleMenu] = useState(false)
+  const handleClickBurger=()=>{
+      setToggleMenu(!toggleMenu)
+  }
+    
+
     return (
-      <header className="flex justify-between bg-slate-900 text-white font-bold p-4">
+      <header className="relative flex justify-between bg-slate-900 text-white font-bold p-4">
         <ButtonHome
           handleClick={handleClickHome}
         />
@@ -30,6 +38,7 @@ export function NavbarHome({handleClickHome=()=>{}, handleClickRegional=()=>{}, 
           <ButtonBurger
             handleClick={handleClickBurger}
           />
+          {toggleMenu && <ExpandableMenu/>}
         </div>
       </header>
     );

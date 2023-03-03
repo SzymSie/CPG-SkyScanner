@@ -42,8 +42,8 @@ const handleClickRegional = () =>
 const handleClickLogin = () =>
   alert('clicked login. wire up to <Link href"/account"/>');
 
-const handleClickBurger = () =>
-  alert("clicked burger. wire up to dropdown menu");
+// const handleClickBurger = () =>
+//   alert("clicked burger. wire up to dropdown menu");
 
 export default function Home() {
   return (
@@ -52,7 +52,7 @@ export default function Home() {
         handleClickHome={handleClickHome}
         handleClickRegional={handleClickRegional}
         handleClickLogin={handleClickLogin}
-        handleClickBurger={handleClickBurger}
+        // handleClickBurger={handleClickBurger}
       />
       <Hero />
       <Main />

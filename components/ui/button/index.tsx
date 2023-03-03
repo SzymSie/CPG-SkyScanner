@@ -34,7 +34,7 @@ export function ButtonHome({ handleClick = () => {}, ...rest }) {
 export function ButtonRegional({ handleClick = () => {}, ...rest }) {
   return (
     <Button
-      className="items-center bg-slate-900 text-xl border border-transparent rounded-lg px-2.5 py-2 hover:bg-slate-500"
+      className="relative items-center bg-slate-900 text-xl border border-transparent rounded-lg px-2.5 py-2 hover:bg-slate-500"
       onClick={handleClick}
       title="Regional"
       {...rest}
