@@ -38,7 +38,8 @@ export function NavbarHome({handleClickHome=()=>{}, handleClickRegional=()=>{}, 
           <ButtonBurger
             handleClick={handleClickBurger}
           />
-          {toggleMenu && <ExpandableMenu/>}
+
+          {toggleMenu &&<ExpandableMenu />}
         </div>
       </header>
     );
