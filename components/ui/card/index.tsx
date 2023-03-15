@@ -1,4 +1,10 @@
-function Card({ className, title, onClick = () => {} }) {
+interface Props {
+  children?: any,
+  className?: any,
+  title?: string,
+  onClick?: any
+}
+function Card({ className, title, onClick = () => {} }: Props) {
   const defaultClassNames = "shadow-md focus:cursor-pointer";
   return (
     <div

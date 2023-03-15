@@ -1,11 +1,17 @@
 import { FaBookOpen, FaUserCircle, FaBars } from "react-icons/fa";
 
+interface Props {
+  children?: any,
+  className?: any,
+  title?: string,
+  onClick?: any
+}
 export default function Button({
   children,
   className,
   title,
   onClick = () => {},
-}) {
+}: Props){
   const defaultClassNames = "shadow-md focus:cursor-pointer";
   return (
     <button
